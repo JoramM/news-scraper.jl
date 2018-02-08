@@ -54,4 +54,4 @@ ys = [v for v = values(ordered_dates)]
 
 println("plotting...")
 plotlyjs()
-plot(xs, ys, title="Spiegel-Artikel zum Thema KI")
+plot(xs, ys, title="AI articles published on spiegel-online.de")

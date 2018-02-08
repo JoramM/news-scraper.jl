@@ -53,5 +53,4 @@ ys = [v for v = values(ordered_dates)]
 
 println("plotting...")
 plotlyjs()
-plot(xs, ys, title="Golem-Artikel zum Thema KI")
-println("done.")
+plot(xs, ys, title="AI articles published on golem.de")
