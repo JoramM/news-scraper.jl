@@ -17,3 +17,7 @@ I recommend using the [Juno IDE](http://junolab.org) (or add some packages to [A
 > You can evaluate your Julia code inline by navigating your cursor to the appropriate code and hitting `Ctrl+Enter`. This will run the code block that the cursor is contained in. [...] To specifically choose which code to evaluate, highlight the appropriate parts and use `Ctrl+Enter`.
 
 -> see [Juno Documentation](http://docs.junolab.org/latest/man/basic_usage.html)
+
+## Results (Example)
+Number of artilcles published in the category "künstliche Intelligenz" (ai) on golem.de:
+![Number of artilcles published in the category "künstliche Intelligenz" (golem.de)](golem_ai.png)
