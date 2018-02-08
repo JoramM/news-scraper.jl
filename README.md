@@ -4,11 +4,16 @@ I was wondering how much articles about "Artificial Intelligence" where publishe
 
 ## Dependencies
 
-I recommend using the [Juno IDE](http://junolab.org) (or add some packages to Atom: [uber-juno](https://github.com/JunoLab/uber-juno)) to run the code. A plotting tool is also integrated.
-
 Add the following packages to Julia
 ```Julia
 julia> Pkg.add("Cascadia")
 julia> Pkg.add("Plots")
 julia> Pkg.add("PlotlyJS")
 ```
+
+## Run the scrapers
+I recommend using the [Juno IDE](http://junolab.org) (or add some packages to [Atom](https://atom.io): [uber-juno](https://github.com/JunoLab/uber-juno)) to run the code. Otherwise the plotting might not work.
+
+> You can evaluate your Julia code inline by navigating your cursor to the appropriate code and hitting `Ctrl+Enter`. This will run the code block that the cursor is contained in. [...] To specifically choose which code to evaluate, highlight the appropriate parts and use `Ctrl+Enter`.
+
+-> see [Juno Documentation](http://docs.junolab.org/latest/man/basic_usage.html)
