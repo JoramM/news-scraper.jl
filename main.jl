@@ -29,11 +29,16 @@ layout = Layout(;
         :range => [2000, ignore_year-1],
         :dtick => 2
     ),
+    margin = Dict(
+        :l => 50,
+        :r => 10,
+        :b => 60,
+        :t => 50
+    ),
     yaxis = Dict(
         :title => "Number of Articles"
     ),
-    title = "Articles about artificial intelligence per year",
-    margin = 0
+    title = "Articles about artificial intelligence per year"
 )
 
 println("plotting...")
