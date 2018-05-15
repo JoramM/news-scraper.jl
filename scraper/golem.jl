@@ -1,7 +1,8 @@
 # only use a function and no module to keep it simple
 function scrape_golem(maxpages, ignore_year)
-    host = "http://www.golem.de"
+    host = "https://www.golem.de"
     hostname = split(host, ".")[2]
+    println("host: $(host)")
 
     # collect
     articles = []
@@ -25,7 +26,7 @@ function scrape_golem(maxpages, ignore_year)
     out = []
     dates = OrderedDict{Int, Int}()
     for article in articles
-        date = nodeText(matchall(Selector(".text1"), article)[1])[1:10]
+        date = nodeText(matchall(Selector(".icon-date"), article)[1])[1:10]
         year = parse(Int, split(date, ".")[3])
         if year == ignore_year
             continue
