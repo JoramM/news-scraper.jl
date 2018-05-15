@@ -24,6 +24,8 @@ Each of the three scraped websites provide a category with all articles about ar
 
 ![plot](img/plot.png)
 
+It seems that we get nearly the same amout of articles like the year before (2017)...
+
 Source:
 * [heise.de - Künstliche Intelligenz](https://www.heise.de/thema/Künstliche-Intelligenz/)
 * [golem.de - Künstliche Intelligenz](https://www.golem.de/specials/ki/)

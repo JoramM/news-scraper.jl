@@ -2,6 +2,7 @@
 function scrape_spiegel(maxpages, ignore_year)
     host = "http://www.spiegel-online.de"
     hostname = split(host, ".")[2]
+    println("host: $(host)")
 
     # collect
     articles = []

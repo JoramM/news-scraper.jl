@@ -2,6 +2,7 @@
 function scrape_heise(maxpages, ignore_year)
     host = "https://www.heise.de"
     hostname = split(host, ".")[2]
+    println("host: $(host)")
 
     # collect
     articles = []
@@ -16,7 +17,7 @@ function scrape_heise(maxpages, ignore_year)
         else
             relevant = matchall(Selector(".themenseite-thema__article-list"),html.root)[1]
         end
-        nodes = matchall(Selector(".akwa-article-teaser"),relevant)
+        nodes = matchall(Selector(".a-article-teaser__link"),relevant)
         if (length(nodes) > 0)
             append!(articles, nodes)
         else
@@ -44,7 +45,7 @@ function scrape_heise(maxpages, ignore_year)
             dates[year] = 1
         end
 
-        title = nodeText(matchall(Selector("h1.akwa-article-teaser__title"), article)[1])
+        title = nodeText(matchall(Selector("span.a-article-teaser__title-text"), article)[1])
         title = strip(title)    # remove whitespaces
         link = host * matchall(Selector("a"), article)[1].attributes["href"]
         push!(out, [date, title, link])

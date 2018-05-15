@@ -8,11 +8,11 @@ include("scraper/heise.jl")
 include("scraper/golem.jl")
 include("scraper/spiegel.jl")
 
-ignore_year = 2018
+ignore_year = 2019
 
 data = Dict()
 #               scrape_...(maxpages, ignore_year)
-data["heise"] = scrape_heise(39, ignore_year)
+data["heise"] = scrape_heise(43, ignore_year)
 data["golem"] = scrape_golem(6, ignore_year)
 data["spiegel"] = scrape_spiegel(20, ignore_year)
 
@@ -25,7 +25,7 @@ records = [trace_heise, trace_golem, trace_spiegel]
 
 layout = Layout(;
     xaxis = Dict(
-        :title => "Year of publication",
+        :title => "Jahr der Veröffentlichung",
         :range => [2000, ignore_year-1],
         :dtick => 2
     ),
@@ -36,9 +36,9 @@ layout = Layout(;
         :t => 50
     ),
     yaxis = Dict(
-        :title => "Number of Articles"
+        :title => "Anzahl der Artikel"
     ),
-    title = "Articles about artificial intelligence per year"
+    title = "Artikel über künstliche Intelligenz pro Jahr (Stand: $(Dates.today()))"
 )
 
 println("plotting...")
